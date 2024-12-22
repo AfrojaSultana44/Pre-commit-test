@@ -1,13 +1,8 @@
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+  - repo: local
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-added-large-files
-  - repo: https://github.com/digitalgnome/pre-commit-php
-    rev: v1.3.0
-    hooks:
-      - id: php-lint
-      - id: php-cs-fixer
-      - id: phpstan
+      - id: check-commit-message
+        name: Check Commit Message Format
+        entry: ./check-commit-msg.sh
+        language: script
+        stages: [commit-msg]
