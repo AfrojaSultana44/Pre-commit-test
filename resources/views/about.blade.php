@@ -7,5 +7,7 @@
 </head>
 <body>
     <h2>Testing pre-commit</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo!</p>
+    <h1>Testing3</h1>
 </body>
 </html>

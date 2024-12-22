@@ -1,8 +1,25 @@
+
 repos:
   - repo: local
-    hooks:
+    hooks: 
       - id: check-commit-message
         name: Check Commit Message Format
-        entry: ./check-commit-msg.sh
+        entry: ./.commit-msg.sh
         language: script
         stages: [commit-msg]
+           
+  - repo: local
+    hooks:
+      - id: php-cs-fixer
+        name: PHP CS Fixer
+        entry: php-cs-fixer fix --config .php-cs-fixer.php
+        language: system
+        types: [php]
+
+  - repo: local
+    hooks:
+      - id: php-cs-fixer-check
+        name: PHP CS Fixer Check
+        entry: ./.pre-commit.sh
+        language: script
+        types: [php]
