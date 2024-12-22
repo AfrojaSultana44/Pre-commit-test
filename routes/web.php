@@ -7,5 +7,8 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
+    $arr = [1, 2, 3];
+    echo $arr;
+
     return view('about');
 });
