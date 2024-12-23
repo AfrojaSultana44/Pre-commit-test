@@ -9,6 +9,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     $arr = [1, 2, 3];
     echo $arr;
+    $sum = $a + $b;
+    echo $sum;
 
     return view('about');
 });
